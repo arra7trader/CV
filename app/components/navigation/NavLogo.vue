@@ -9,38 +9,70 @@ defineProps<{
   <NuxtLink
     :to="href || '/'"
     :title="title"
-    class="flex h-9 items-center justify-center gap-2 rounded-xl px-2 transition-transform hover:scale-105"
+    class="group flex h-9 items-center justify-center gap-1.5 rounded-xl px-2 transition-transform duration-300 hover:scale-[1.03]"
   >
-    <div class="flex items-center gap-2">
-      <!-- Inline SVG Logo - Terminal with A hint (Dynamic accent colors) -->
+    <div class="relative flex items-center justify-center">
+      <!-- Glow effect on hover -->
+      <div class="absolute inset-0 rounded-full bg-accent-500/20 blur-md opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+      
+      <!-- Minimalist A Logo -->
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 100 100" 
-        class="h-7 w-7"
+        viewBox="0 0 40 40" 
+        class="relative h-6 w-6"
         fill="none"
       >
-        <!-- Terminal window frame -->
-        <rect x="10" y="15" width="80" height="70" rx="8" stroke="currentColor" stroke-width="4" fill="none" class="text-accent-500"/>
-        
-        <!-- Terminal top bar -->
-        <rect x="10" y="15" width="80" height="16" rx="8" class="fill-accent-500"/>
-        <rect x="10" y="23" width="80" height="8" class="fill-accent-500"/>
-        
-        <!-- Window buttons -->
-        <circle cx="22" cy="23" r="3" class="fill-accent-900"/>
-        <circle cx="32" cy="23" r="3" class="fill-accent-900"/>
-        <circle cx="42" cy="23" r="3" class="fill-accent-900"/>
-        
-        <!-- Terminal prompt > -->
-        <path d="M25 50L38 60L25 70" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="text-accent-500"/>
-        
-        <!-- Cursor line -->
-        <path d="M45 68H70" stroke="currentColor" stroke-width="4" stroke-linecap="round" class="text-accent-400"/>
-        
-        <!-- Subtle A shape -->
-        <path d="M55 45L62 60L69 45" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-accent-400"/>
-        <path d="M57 54H67" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="text-accent-400"/>
+        <!-- The 'A' shape - drawn from bottom left, up to peak, down to right -->
+        <path 
+          d="M8 32 L20 8 L32 32" 
+          stroke="currentColor" 
+          stroke-width="4.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          class="text-accent-500 path-draw drop-shadow-sm"
+        />
+        <!-- Tech node / crossbar of the A -->
+        <circle 
+          cx="20" 
+          cy="22.5" 
+          r="3.5" 
+          fill="currentColor" 
+          class="text-accent-500 animate-pulse dot-fade"
+        />
       </svg>
     </div>
+    
+    <!-- Text Logomark -->
+    <span class="font-sans text-lg font-extrabold tracking-widest text-slate-800 dark:text-slate-100 transition-colors duration-300 group-hover:text-accent-600 dark:group-hover:text-accent-400">
+      ALDY<span class="text-accent-500">.</span>
+    </span>
   </NuxtLink>
 </template>
+
+<style scoped>
+/* SVG Drawing Animation */
+.path-draw {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawPath 1.2s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+}
+
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Delay the dot appearance until line is drawn */
+.dot-fade {
+  opacity: 0;
+  animation: fadeInPulse 2s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeInPulse {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+</style>

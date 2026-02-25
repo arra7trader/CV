@@ -47,24 +47,35 @@ watch(() => route.path, () => {
 
 <template>
   <header
-    :class="clsx('fixed left-0 right-0 top-0 z-[1000]', 'fm:absolute')"
+    :class="clsx(
+      'fixed w-full top-0 z-[1000]',
+      'md:left-1/2 md:w-auto md:-translate-x-1/2 md:max-w-fit',
+      'transition-all duration-500 ease-in-out',
+      isScrolled ? 'md:top-4 lg:top-6' : 'md:top-4',
+      'fm:absolute'
+    )"
   >
+    <!-- Background overlay / Floating Pill -->
     <div
       :class="clsx(
-        'fixed inset-0 h-16',
-        isScrolled && [
-          'border-divider-light border-b bg-white/70 backdrop-blur',
-          'dark:border-divider-dark dark:bg-slate-900/80',
-        ],
-        'fm:hidden'
+        'absolute inset-0 -z-10 transition-all duration-500',
+        'md:rounded-full border-b md:border',
+        isScrolled
+          ? [
+              'bg-white/70 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]',
+              'dark:bg-slate-900/80 dark:shadow-[0_8px_30px_rgb(0,0,0,0.12)]',
+              'border-slate-200/50 dark:border-slate-800/50'
+            ]
+          : 'bg-transparent border-transparent dark:border-transparent'
       )"
     />
-    <div :class="clsx('h-2', isScrolled && '-mt-2')" />
-    <div :class="clsx('content-wrapper-max')">
+    
+    <div :class="clsx('h-2', isScrolled && '-mt-2', 'md:hidden')" />
+    <div class="px-2 md:px-0">
       <div
         :class="clsx(
-          'relative z-50 flex h-16 items-center justify-between px-2 text-sm',
-          'md:px-4'
+          'relative z-50 flex items-center justify-between gap-4 px-2 text-sm transition-all duration-500',
+          isScrolled ? 'h-14 md:h-12 md:px-4' : 'h-16 md:h-14 md:px-3'
         )"
       >
         <!-- Left side: Logo + Desktop Nav -->
@@ -133,7 +144,7 @@ watch(() => route.path, () => {
     <Transition name="fade">
       <div 
         v-if="isMobileMenuOpen"
-        class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+        class="fixed inset-0 z-40 bg-slate-900/20 backdrop-blur-sm dark:bg-slate-900/60 md:hidden"
         @click="closeMobileMenu"
       />
     </Transition>
@@ -144,13 +155,13 @@ watch(() => route.path, () => {
         v-if="isMobileMenuOpen"
         :class="clsx(
           'fixed right-0 top-0 z-50 h-full w-72 md:hidden',
-          'bg-white dark:bg-slate-900',
-          'border-l border-divider-light dark:border-divider-dark',
+          'bg-white/95 backdrop-blur-xl dark:bg-slate-900/95',
+          'border-l border-slate-200/50 dark:border-slate-800/50',
           'shadow-2xl'
         )"
       >
         <!-- Drawer Header -->
-        <div class="flex h-16 items-center justify-between border-b border-divider-light px-4 dark:border-divider-dark">
+        <div class="flex h-16 items-center justify-between border-b border-slate-200/50 px-4 dark:border-slate-800/50">
           <span class="font-bold text-slate-700 dark:text-slate-300">Menu</span>
           <button
             @click="closeMobileMenu"

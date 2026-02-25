@@ -12,11 +12,7 @@ useSeoMeta({
     <!-- Header Section -->
     <HomeHeader />
     
-    <!-- Featured Cards Section (Desktop Only) -->
-    <div class="hidden lg:-mt-16 lg:mb-24 lg:block">
-      <HomeFeaturedCards />
-    </div>
-    
+
     <!-- Quote Section -->
     <div class="-mt-12 mb-12 md:mb-24 md:mt-0">
       <HomeQuote />
@@ -35,6 +31,11 @@ useSeoMeta({
     <!-- Pretty & Optimized Section -->
     <section class="mb-12 lg:mb-24">
       <HomePrettyOptimized />
+    </section>
+
+    <!-- Bento Grid Showcase (Navigation Hub) -->
+    <section>
+      <HomeShowcase />
     </section>
   </div>
 </template>
