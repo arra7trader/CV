@@ -17,7 +17,7 @@ const isActive = computed(() => {
 <template>
   <NuxtLink
     :to="href"
-    class="relative group flex h-9 items-center justify-center gap-1 rounded-full px-4 text-[13px] font-medium transition-all duration-300"
+    class="relative group flex h-9 items-center justify-center gap-1 rounded-full px-3 lg:px-4 text-[13px] font-medium whitespace-nowrap transition-all duration-300"
     :class="[
       isActive
         ? 'text-accent-600 dark:text-accent-400'
