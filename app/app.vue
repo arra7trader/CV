@@ -1,8 +1,9 @@
 <script setup lang="ts">
-const colorMode = useColorMode()
+import { Analytics } from '@vercel/analytics/nuxt'
 </script>
 
 <template>
+  <Analytics />
   <NuxtLoadingIndicator color="--color-primary" />
   <div>
     <NuxtLayout>
