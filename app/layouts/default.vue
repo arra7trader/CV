@@ -5,8 +5,5 @@
       <slot />
     </main>
     <TheFooter />
-    
-    <!-- Easter Egg: Website Destroyer -->
-    <EasterEggWebsiteDestroyer />
   </div>
 </template>

@@ -5,17 +5,16 @@ import { experienceConfig } from '~/config/experience'
 import type { TimelineItem } from '~/config/experience'
 
 definePageMeta({
-  layout: false // We use a bare layout because this is a full-screen immersive experience
+  layout: false
 })
 
 useSeoMeta({
-  title: 'My Journey | Tri Aldy Kurniawan',
-  description: 'An interactive space journey through my educational and professional experience.',
+  title: 'Journey | Arland P',
+  description: 'An interactive journey through the projects and learning experiences behind my work.',
 })
 
 const router = useRouter()
 
-// 1. Gather all timeline items and parse their start dates for chronological sorting
 interface ParsedTimelineItem extends TimelineItem {
   parsedDate: Date
 }
@@ -37,16 +36,13 @@ const allItems: ParsedTimelineItem[] = [
   return { ...item, parsedDate }
 })
 
-// Sort chronologically (oldest first) for the journey
 const sortedJourney = allItems.sort((a, b) => a.parsedDate.getTime() - b.parsedDate.getTime())
 
-// State
 const currentIndex = ref(0)
-const isWarping = ref(true) // Start with warping animation
+const isWarping = ref(true)
 const hasStarted = ref(false)
 
 onMounted(() => {
-  // Simulate the arrival warp effect
   setTimeout(() => {
     hasStarted.value = true
     setTimeout(() => {
@@ -58,14 +54,11 @@ onMounted(() => {
 const currentStory = computed(() => sortedJourney[currentIndex.value])
 const isLast = computed(() => currentIndex.value === sortedJourney.length - 1)
 
-// Navigation
 const handleNext = () => {
   if (isLast.value) return
-  
-  // Trigger warp speed effect
+
   isWarping.value = true
-  
-  // Wait for warp animation peak, then change text, then slow down
+
   setTimeout(() => {
     currentIndex.value++
     setTimeout(() => {
@@ -81,52 +74,45 @@ const handleFinish = () => {
   }, 1000)
 }
 
-// Map the generic descriptions to more conversational story lines for the typing effect
 const generateStoryText = (item: ParsedTimelineItem) => {
   let intro = ''
   if (item.type === 'education') {
-    intro = `In ${item.periodStart.substring(0,4)}, I studied at ${item.company}.`
+    intro = `In ${item.periodStart.substring(0, 4)}, I focused on learning through ${item.company}.`
   } else if (item.type === 'internship') {
     intro = `I began my practical journey as a ${item.role} at ${item.company}.`
   } else if (item.type === 'freelance') {
-    intro = `I ventured into freelance work as a ${item.role} for ${item.company}.`
+    intro = `I moved deeper into product building as a ${item.role} through ${item.company}.`
   } else {
     intro = `I took on the role of ${item.role} at ${item.company}.`
   }
-  
-  const tasks = item.tasks && item.tasks.length > 0 
-    ? '\n\nKey achievements & responsibilities:\n• ' + item.tasks.join('\n• ') 
+
+  const tasks = item.tasks && item.tasks.length > 0
+    ? '\n\nKey highlights:\n- ' + item.tasks.join('\n- ')
     : ''
-    
+
   return `${intro}\n\n${item.description}${tasks}`
 }
-
 </script>
 
 <template>
-  <div class="relative min-h-screen w-full bg-black overflow-hidden font-sans text-slate-100 flex items-center justify-center">
-    
-    <!-- Immersive Background -->
+  <div class="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black font-sans text-slate-100">
     <JourneySpaceBackground :is-warping="isWarping" />
 
-    <!-- Overlay content -->
-    <div 
+    <div
       class="relative z-10 w-full px-4 transition-all duration-700"
       :class="isWarping ? 'opacity-0 scale-95 blur-sm' : 'opacity-100 scale-100 blur-none'"
     >
-      <!-- Navigation / Back button -->
-      <div class="absolute top-4 md:top-8 left-4 md:left-8 z-50">
-        <button 
+      <div class="absolute top-4 left-4 z-50 md:top-8 md:left-8">
+        <button
           @click="router.push('/')"
-          class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/70 hover:text-white transition-colors rounded-full hover:bg-white/10 backdrop-blur-md"
+          class="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 hover:text-white backdrop-blur-md"
         >
-          <Icon name="heroicons:arrow-left-20-solid" class="w-4 h-4" />
-          Back to Earth
+          <Icon name="heroicons:arrow-left-20-solid" class="h-4 w-4" />
+          Back to Home
         </button>
       </div>
 
-      <!-- Main Story Node Component -->
-      <JourneyStoryNode 
+      <JourneyStoryNode
         v-if="currentStory && hasStarted"
         :key="currentIndex"
         :title="currentStory.role"
@@ -138,6 +124,5 @@ const generateStoryText = (item: ParsedTimelineItem) => {
         @finish="handleFinish"
       />
     </div>
-
   </div>
 </template>

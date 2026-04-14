@@ -44,7 +44,7 @@ defineProps<{
     
     <!-- Text Logomark -->
     <span class="font-sans text-lg font-extrabold tracking-widest text-slate-800 dark:text-slate-100 transition-colors duration-300 group-hover:text-accent-600 dark:group-hover:text-accent-400">
-      ALDY<span class="text-accent-500">.</span>
+      ARRA7<span class="text-accent-500">.</span>
     </span>
   </NuxtLink>
 </template>

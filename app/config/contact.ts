@@ -18,72 +18,60 @@ export interface ContactInfo {
 export const contactConfig = {
   meta: {
     title: 'Contact',
-    description: "Get in touch with me and let's work together!",
+    description: "Let's build something useful together.",
     caption: 'Work'
   },
 
-  name: 'Tri Aldy Kurniawan',
-  email: 'trialdykk@gmail.com', // Update with real email
+  name: 'Arland P',
+  email: '',
 
   location: {
-    city: 'Malang',
-    region: 'Jawa Timur',
+    city: 'Indonesia',
+    region: '',
     country: 'Indonesia',
     timezone: 'GMT+7',
-    flag: '🇮🇩'
+    flag: 'ID'
   },
 
   intro: {
-    title: "Let's Work Together!",
-    description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!"
+    title: "Let's build something useful.",
+    description: 'Open to collaboration on web products, internal tools, AI workflows, and market-focused systems.'
   },
 
   contactInfo: [
     {
       icon: 'heroicons:map-pin-20-solid',
       label: 'Location',
-      value: 'Malang, Jawa Timur',
-      subValue: 'Indonesia 🇮🇩'
+      value: 'Indonesia',
+      subValue: 'Remote-friendly'
     },
     {
       icon: 'heroicons:clock-20-solid',
       label: 'Timezone',
       value: 'GMT+7',
       subValue: 'Western Indonesia Time (WIB)'
-    },
-    {
-      icon: 'heroicons:envelope-20-solid',
-      label: 'Email',
-      value: 'trialdykk@gmail.com',
     }
   ] as ContactInfo[],
 
   socialLinks: [
     {
       name: 'GitHub',
-      url: 'https://github.com/trialdyk',
+      url: 'https://github.com/arra7trader',
       icon: 'simple-icons:github',
       iconColor: 'text-slate-900 dark:text-white',
-      handle: '@trialdyk'
+      handle: '@arra7trader'
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/trialdyk',
+      url: 'https://www.linkedin.com/in/arland-p-41598595/',
       icon: 'simple-icons:linkedin',
       iconColor: 'text-[#0A66C2]',
-      handle: 'Tri Aldy Kurniawan'
-    },
-    {
-      name: 'Instagram',
-      url: 'https://instagram.com/trialdyk',
-      icon: 'simple-icons:instagram',
-      iconColor: 'text-[#E4405F]',
-      handle: '@trialdyk'
+      handle: 'arland-p-41598595'
     }
   ] as SocialLink[],
 
   availability: {
-    status: 'available', // 'available' | 'busy' | 'unavailable'
-    message: 'Currently available for freelance projects and collaboration opportunities.'
+    status: 'available',
+    message: 'Open to collaboration, product builds, and practical software work.'
   }
 }

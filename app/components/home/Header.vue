@@ -18,7 +18,7 @@
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-500/60 dark:bg-teal-400/60 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-500 dark:bg-teal-400"></span>
               </span>
-              <span>Available for Freelance</span>
+              <span>Open to collaborate</span>
             </div>
           </div>
           <HomeHeaderTitle />

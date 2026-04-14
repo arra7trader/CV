@@ -10,7 +10,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <!-- Page Header -->
     <header class="background-grid background-grid--fade-out pb-10 pt-32 lg:pb-14 lg:pt-40">
       <div class="content-wrapper">
         <div class="max-w-3xl">
@@ -27,39 +26,33 @@ useSeoMeta({
       </div>
     </header>
 
-    <!-- Content -->
     <div class="pb-20" id="page-content">
       <div class="content-wrapper">
         <div class="page-content max-w-3xl">
-          
-          <!-- Intro -->
           <p>
-            I'm always open to discussing <strong>new projects</strong>, creative ideas, 
-            or opportunities to be part of your vision. Feel free to reach out!
+            {{ contactConfig.intro.description }}
           </p>
 
-          <!-- Availability -->
-          <div class="flex items-center gap-2 my-4">
+          <div class="my-4 flex items-center gap-2">
             <span class="relative flex h-2.5 w-2.5">
               <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
               <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
             </span>
-            <span class="text-sm text-green-600 dark:text-green-400 font-medium">
-              Available for freelance projects
+            <span class="text-sm font-medium text-green-600 dark:text-green-400">
+              {{ contactConfig.availability.message }}
             </span>
           </div>
 
-          <!-- Contact Info -->
-          <h2 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-4">Contact Information</h2>
-          
+          <h2 class="mb-4 text-lg font-bold text-slate-800 dark:text-slate-200">Contact Information</h2>
+
           <div class="space-y-3">
             <div v-for="info in contactConfig.contactInfo" :key="info.label" class="flex items-center gap-3">
-              <Icon :name="info.icon" class="h-5 w-5 text-accent-500 shrink-0" />
+              <Icon :name="info.icon" class="h-5 w-5 shrink-0 text-accent-500" />
               <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                 <span class="text-sm text-slate-500 dark:text-slate-400">{{ info.label }}:</span>
                 <span class="font-medium text-slate-800 dark:text-slate-200">
                   {{ info.value }}
-                  <span v-if="info.subValue" class="text-slate-500 dark:text-slate-400 font-normal">
+                  <span v-if="info.subValue" class="font-normal text-slate-500 dark:text-slate-400">
                     · {{ info.subValue }}
                   </span>
                 </span>
@@ -67,11 +60,10 @@ useSeoMeta({
             </div>
           </div>
 
-          <!-- Social Links -->
-          <h2 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-4">Find Me On</h2>
-          
+          <h2 class="mb-4 text-lg font-bold text-slate-800 dark:text-slate-200">Find Me On</h2>
+
           <div class="flex flex-wrap gap-3">
-            <a 
+            <a
               v-for="social in contactConfig.socialLinks"
               :key="social.name"
               :href="social.url"
@@ -90,20 +82,20 @@ useSeoMeta({
             </a>
           </div>
 
-          <!-- Email CTA -->
-          <h2 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-4">Send Me a Message</h2>
-          <p class="text-slate-600 dark:text-slate-400 mb-4">
-            Prefer email? Drop me a message:
-          </p>
-          
-          <a 
-            :href="`mailto:${contactConfig.email}`"
-            class="inline-flex items-center gap-2 text-accent-600 dark:text-accent-400 font-semibold hover:underline"
-          >
-            <Icon name="heroicons:envelope-20-solid" class="h-5 w-5" />
-            {{ contactConfig.email }}
-          </a>
+          <template v-if="contactConfig.email">
+            <h2 class="mb-4 text-lg font-bold text-slate-800 dark:text-slate-200">Send Me a Message</h2>
+            <p class="mb-4 text-slate-600 dark:text-slate-400">
+              Prefer email? Drop me a message:
+            </p>
 
+            <a
+              :href="`mailto:${contactConfig.email}`"
+              class="inline-flex items-center gap-2 font-semibold text-accent-600 hover:underline dark:text-accent-400"
+            >
+              <Icon name="heroicons:envelope-20-solid" class="h-5 w-5" />
+              {{ contactConfig.email }}
+            </a>
+          </template>
         </div>
       </div>
     </div>

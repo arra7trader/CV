@@ -11,8 +11,7 @@ module.exports = {
     './app/**/*.{vue,js,ts}',
     './components/**/*.{vue,js,ts}',
     './layouts/**/*.{vue,js,ts}',
-    './pages/**/*.{vue,js,ts}',
-    './content/**/*.md'
+    './pages/**/*.{vue,js,ts}'
   ],
   darkMode: 'class',
   theme: {

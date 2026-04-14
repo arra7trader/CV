@@ -1,37 +1,36 @@
 <script setup lang="ts">
-// Multiple code snippets that rotate
 const codeSnippets = [
   {
     filename: 'developer.ts',
     lines: [
       { text: 'const developer = {', color: 'text-violet-600 dark:text-violet-400' },
-      { text: '  name: "Tri Aldy",', color: 'text-emerald-600 dark:text-green-400' },
+      { text: '  name: "Arland P",', color: 'text-emerald-600 dark:text-green-400' },
       { text: '  role: "Fullstack",', color: 'text-emerald-600 dark:text-green-400' },
-      { text: '  stack: ["Vue", "Go"],', color: 'text-amber-600 dark:text-amber-400' },
-      { text: '  coffee: true ☕', color: 'text-pink-600 dark:text-pink-400' },
+      { text: '  stack: ["Next", "TS"],', color: 'text-amber-600 dark:text-amber-400' },
+      { text: '  ships: "real products"', color: 'text-pink-600 dark:text-pink-400' },
       { text: '};', color: 'text-violet-600 dark:text-violet-400' },
     ]
   },
   {
-    filename: 'analyst.ts',
+    filename: 'systems.ts',
     lines: [
-      { text: 'class SystemAnalyst {', color: 'text-violet-600 dark:text-violet-400' },
-      { text: '  analyze(problem) {', color: 'text-sky-600 dark:text-sky-400' },
-      { text: '    const solution =', color: 'text-emerald-600 dark:text-green-400' },
-      { text: '      this.solve(problem);', color: 'text-emerald-600 dark:text-green-400' },
-      { text: '    return solution;', color: 'text-amber-600 dark:text-amber-400' },
+      { text: 'class ProductBuilder {', color: 'text-violet-600 dark:text-violet-400' },
+      { text: '  build(problem) {', color: 'text-sky-600 dark:text-sky-400' },
+      { text: '    return solve(', color: 'text-emerald-600 dark:text-green-400' },
+      { text: '      problem, fast', color: 'text-emerald-600 dark:text-green-400' },
+      { text: '    )', color: 'text-amber-600 dark:text-amber-400' },
       { text: '  }', color: 'text-violet-600 dark:text-violet-400' },
     ]
   },
   {
-    filename: 'mobile.dart',
+    filename: 'markets.ts',
     lines: [
-      { text: 'class MobileApp {', color: 'text-violet-600 dark:text-violet-400' },
-      { text: '  final platforms = [', color: 'text-sky-600 dark:text-sky-400' },
-      { text: '    "Android",', color: 'text-emerald-600 dark:text-green-400' },
-      { text: '    "iOS",', color: 'text-emerald-600 dark:text-green-400' },
-      { text: '  ];', color: 'text-amber-600 dark:text-amber-400' },
-      { text: '}', color: 'text-violet-600 dark:text-violet-400' },
+      { text: 'const focus = [', color: 'text-violet-600 dark:text-violet-400' },
+      { text: '  "automation",', color: 'text-sky-600 dark:text-sky-400' },
+      { text: '  "analytics",', color: 'text-emerald-600 dark:text-green-400' },
+      { text: '  "trading tools"', color: 'text-emerald-600 dark:text-green-400' },
+      { text: ']', color: 'text-amber-600 dark:text-amber-400' },
+      { text: '', color: 'text-violet-600 dark:text-violet-400' },
     ]
   },
 ]
@@ -42,12 +41,10 @@ const showCursor = ref(true)
 const isTransitioning = ref(false)
 
 onMounted(() => {
-  // Animate through code lines
   setInterval(() => {
     if (codeSnippets[currentSnippetIndex.value] && currentLineIndex.value < codeSnippets[currentSnippetIndex.value]!.lines.length + 1) {
       currentLineIndex.value++
     } else {
-      // Switch to next snippet
       isTransitioning.value = true
       setTimeout(() => {
         currentSnippetIndex.value = (currentSnippetIndex.value + 1) % codeSnippets.length
@@ -56,8 +53,7 @@ onMounted(() => {
       }, 500)
     }
   }, 600)
-  
-  // Blinking cursor
+
   setInterval(() => {
     showCursor.value = !showCursor.value
   }, 500)
@@ -71,68 +67,59 @@ const currentSnippet = computed(() => codeSnippets[currentSnippetIndex.value] ||
     v-motion
     :initial="{ opacity: 0, scale: 0.95 }"
     :enter="{ opacity: 1, scale: 1, transition: { delay: 500, duration: 800 } }"
-    class="relative h-[400px] w-[400px] lg:h-[480px] lg:w-[480px] mx-auto"
+    class="relative mx-auto h-[400px] w-[400px] lg:h-[480px] lg:w-[480px]"
   >
-    <!-- Background effects -->
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <!-- Outer rotating ring -->
-      <div class="absolute h-80 w-80 lg:h-96 lg:w-96 rounded-full border border-accent-500/20 animate-spin-slow" />
-      <!-- Inner pulsing circle -->
-      <div class="absolute h-64 w-64 lg:h-80 lg:w-80 rounded-full bg-gradient-to-br from-accent-500/10 to-violet-500/10 animate-pulse" style="animation-duration: 3s;" />
-      
-      <!-- Floating tech icons -->
+      <div class="absolute h-80 w-80 rounded-full border border-accent-500/20 animate-spin-slow lg:h-96 lg:w-96" />
+      <div class="absolute h-64 w-64 rounded-full bg-gradient-to-br from-accent-500/10 to-violet-500/10 animate-pulse lg:h-80 lg:w-80" style="animation-duration: 3s;" />
+
       <div class="absolute top-4 left-6 animate-float" style="animation-delay: 0s;">
-        <div class="h-10 w-10 rounded-xl bg-[#02569B]/20 border border-[#02569B]/40  flex items-center justify-center backdrop-blur-md shadow-lg">
-          <Icon name="simple-icons:flutter" class="h-5 w-5 text-[#02569B]" />
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-900/20 bg-slate-900/10 shadow-lg backdrop-blur-md dark:border-white/20 dark:bg-white/10">
+          <Icon name="simple-icons:nextdotjs" class="h-5 w-5 text-slate-900 dark:text-white" />
         </div>
       </div>
       <div class="absolute top-12 -right-2 animate-float" style="animation-delay: 0.5s;">
-        <div class="h-10 w-10 rounded-xl bg-[#4169E1]/20 border border-[#4169E1]/40 flex items-center justify-center backdrop-blur-md shadow-lg">
-          <Icon name="simple-icons:postgresql" class="h-5 w-5 text-[#4169E1]" />
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-[#3178C6]/40 bg-[#3178C6]/20 shadow-lg backdrop-blur-md">
+          <Icon name="simple-icons:typescript" class="h-5 w-5 text-[#3178C6]" />
         </div>
       </div>
       <div class="absolute bottom-28 left-4 animate-float z-30" style="animation-delay: 1s;">
-        <div class="h-10 w-10 rounded-xl bg-[#00ADD8]/20 border border-[#00ADD8]/40 flex items-center justify-center backdrop-blur-md shadow-lg">
-          <Icon name="simple-icons:go" class="h-5 w-5 text-[#00ADD8]" />
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-[#4169E1]/40 bg-[#4169E1]/20 shadow-lg backdrop-blur-md">
+          <Icon name="simple-icons:postgresql" class="h-5 w-5 text-[#4169E1]" />
         </div>
       </div>
       <div class="absolute top-1/2 -right-4 mt-8 animate-float z-30" style="animation-delay: 1.5s;">
-        <div class="h-10 w-10 rounded-xl bg-[#4FC08D]/20 border border-[#4FC08D]/40 flex items-center justify-center backdrop-blur-md shadow-lg">
-          <Icon name="simple-icons:vuedotjs" class="h-5 w-5 text-[#4FC08D]" />
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-[#06B6D4]/40 bg-[#06B6D4]/20 shadow-lg backdrop-blur-md">
+          <Icon name="simple-icons:tailwindcss" class="h-5 w-5 text-[#06B6D4]" />
         </div>
       </div>
     </div>
-    
-    <!-- Base Layer: 1:1 Profile Photo -->
-    <div class="absolute inset-8 lg:inset-10 lg:bottom-16 z-10 overflow-hidden rounded-[3rem] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] border border-slate-200/50 dark:border-slate-700/50 transition-transform duration-700 hover:scale-[1.02]">
-      <img 
-        src="/profile.png" 
-        alt="Profile Avatar" 
-        class="w-full h-full object-cover transition-all duration-700 hover:scale-105"
+
+    <div class="absolute inset-8 z-10 overflow-hidden rounded-[3rem] border border-slate-200/50 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] transition-transform duration-700 hover:scale-[1.02] dark:border-slate-700/50 lg:inset-10 lg:bottom-16">
+      <img
+        src="/profile.jpg"
+        alt="Profile Avatar"
+        class="h-full w-full object-cover transition-all duration-700 hover:scale-105"
       />
-      <!-- Subtle tint overlay for depth -->
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
     </div>
-    
-    <!-- Code Editor Mockup (Overlapping Top Layer) -->
-    <div 
-      class="code-editor absolute -bottom-4 right-0 lg:-right-4 z-20 w-64 lg:w-72 overflow-hidden rounded-2xl border border-slate-200/50 dark:border-slate-700/50 bg-white/90 dark:bg-slate-900/90 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(139,92,246,0.3)]"
+
+    <div
+      class="code-editor absolute -bottom-4 right-0 z-20 w-64 overflow-hidden rounded-2xl border border-slate-200/50 bg-white/90 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(139,92,246,0.3)] dark:border-slate-700/50 dark:bg-slate-900/90 lg:-right-4 lg:w-72"
       :class="isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'"
     >
-      <!-- Editor header -->
-      <div class="flex items-center gap-2 border-b border-slate-200/50 dark:border-slate-800/50 bg-slate-100/30 dark:bg-slate-800/30 px-3 py-2.5">
+      <div class="flex items-center gap-2 border-b border-slate-200/50 bg-slate-100/30 px-3 py-2.5 dark:border-slate-800/50 dark:bg-slate-800/30">
         <div class="flex gap-1.5">
           <div class="h-2.5 w-2.5 rounded-full bg-red-400" />
           <div class="h-2.5 w-2.5 rounded-full bg-yellow-400" />
           <div class="h-2.5 w-2.5 rounded-full bg-green-400" />
         </div>
-        <span class="ml-2 text-[11px] font-medium tracking-wide text-slate-500 dark:text-slate-400 transition-all duration-300">
+        <span class="ml-2 text-[11px] font-medium tracking-wide text-slate-500 transition-all duration-300 dark:text-slate-400">
           {{ currentSnippet?.filename }}
         </span>
       </div>
-      
-      <!-- Code content -->
-      <div class="p-4 font-mono text-[11px] sm:text-xs leading-relaxed">
+
+      <div class="p-4 font-mono text-[11px] leading-relaxed sm:text-xs">
         <div
           v-for="(line, index) in currentSnippet?.lines"
           :key="index"
@@ -141,18 +128,17 @@ const currentSnippet = computed(() => codeSnippets[currentSnippetIndex.value] ||
         >
           <span class="mr-3 w-4 text-right opacity-50">{{ index + 1 }}</span>
           <span :class="line.color">{{ line.text }}</span>
-          <span 
-            v-if="index === currentLineIndex - 1 && showCursor && currentLineIndex <= (currentSnippet?.lines.length || 0)" 
+          <span
+            v-if="index === currentLineIndex - 1 && showCursor && currentLineIndex <= (currentSnippet?.lines.length || 0)"
             class="ml-0.5 inline-block h-4 w-0.5 bg-accent-500 animate-pulse"
           />
         </div>
       </div>
     </div>
-    
-    <!-- Sparkle effects -->
-    <div class="absolute top-16 left-16 h-1 w-1 rounded-full bg-accent-400 animate-ping z-30" style="animation-duration: 2s;" />
-    <div class="absolute bottom-28 right-32 h-1.5 w-1.5 rounded-full bg-violet-400 animate-ping z-30" style="animation-duration: 2.5s; animation-delay: 0.5s;" />
-    <div class="absolute top-1/2 -right-4 h-1.5 w-1.5 rounded-full bg-pink-400 animate-ping z-30" style="animation-duration: 3s; animation-delay: 1s;" />
+
+    <div class="absolute top-16 left-16 z-30 h-1 w-1 rounded-full bg-accent-400 animate-ping" style="animation-duration: 2s;" />
+    <div class="absolute bottom-28 right-32 z-30 h-1.5 w-1.5 rounded-full bg-violet-400 animate-ping" style="animation-duration: 2.5s; animation-delay: 0.5s;" />
+    <div class="absolute top-1/2 -right-4 z-30 h-1.5 w-1.5 rounded-full bg-pink-400 animate-ping" style="animation-duration: 3s; animation-delay: 1s;" />
   </div>
 </template>
 
@@ -184,7 +170,7 @@ const currentSnippet = computed(() => codeSnippets[currentSnippetIndex.value] ||
 }
 
 .code-editor {
-  box-shadow: 
+  box-shadow:
     0 25px 50px -12px rgba(0, 0, 0, 0.4),
     0 0 40px -10px rgba(139, 92, 246, 0.2);
 }

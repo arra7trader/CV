@@ -11,7 +11,6 @@ const workLinks = [
 const allLinks = [
   { title: 'Home', href: '/' },
   { title: 'Projects', href: '/projects' },
-  { title: 'Blog', href: '/blog' },
   ...workLinks,
 ]
 
@@ -85,9 +84,6 @@ watch(() => route.path, () => {
           <ul :class="clsx('hidden items-center md:flex', 'md:gap-1')">
             <li>
               <NavigationNavLink title="Projects" href="/projects" />
-            </li>
-            <li>
-              <NavigationNavLink title="Blog" href="/blog" />
             </li>
 
             <li v-for="link in workLinks" :key="link.href">

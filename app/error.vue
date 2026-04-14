@@ -87,10 +87,10 @@ const handleGoBack = () => {
             Projects
           </NuxtLink>
           <NuxtLink 
-            to="/blog" 
+            to="/skills-and-tools" 
             class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
           >
-            Blog
+            Skills
           </NuxtLink>
           <NuxtLink 
             to="/contact" 

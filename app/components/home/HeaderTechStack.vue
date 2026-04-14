@@ -17,8 +17,8 @@ import { homeConfig } from '~/config/home'
     </div>
 
     <p class="mb-2.5 text-sm text-slate-600 dark:text-slate-400 flex items-center gap-2">
-      <span class="inline-block animate-pulse">✨</span>
-      current favorite tech stack/tools:
+      <span class="inline-block animate-pulse">*</span>
+      current stack I reach for most:
     </p>
     <ul class="flex flex-wrap gap-2">
       <li

@@ -46,14 +46,14 @@ const scrollToStory = () => {
       </span>
     </NuxtLink>
     
-    <!-- Read the Blog - Ghost button with animated underline -->
+    <!-- View Projects - Ghost button with animated underline -->
     <NuxtLink
-      to="/blog"
+      to="/projects"
       class="group relative inline-flex items-center justify-center gap-2 rounded-xl border border-divider-light bg-white/50 px-6 py-3 font-bold text-slate-700 backdrop-blur-sm transition-all duration-300 hover:border-accent-300 hover:bg-accent-50/50 dark:border-divider-dark dark:bg-slate-800/50 dark:text-slate-300 dark:hover:border-accent-700 dark:hover:bg-accent-900/20"
     >
-      <Icon name="heroicons:book-open-20-solid" class="h-5 w-5 text-accent-500 transition-transform duration-300 group-hover:scale-110" />
+      <Icon name="heroicons:squares-2x2-20-solid" class="h-5 w-5 text-accent-500 transition-transform duration-300 group-hover:scale-110" />
       <span class="relative">
-        Read the Blog
+        View Projects
         <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-accent-500 transition-all duration-300 group-hover:w-full" />
       </span>
     </NuxtLink>

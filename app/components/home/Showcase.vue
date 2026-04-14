@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// Interactive Bento Grid Hub connecting to Experience, Projects, and Skills
+import { contactConfig } from '~/config/contact'
 </script>
 
 <template>
@@ -120,10 +120,10 @@
           <div class="absolute -right-16 -bottom-16 w-64 h-64 rounded-full border border-slate-200/50 dark:border-slate-700/50 group-hover:border-accent-500/30 transition-colors duration-500">
              <div class="w-full h-full relative animate-[spin_20s_linear_infinite] group-hover:animate-[spin_10s_linear_infinite]">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 rounded-full bg-white dark:bg-slate-800 shadow-md">
-                   <Icon name="simple-icons:vuedotjs" class="h-6 w-6 text-[#4FC08D]" />
+                   <Icon name="simple-icons:nextdotjs" class="h-6 w-6 text-slate-900 dark:text-white" />
                 </div>
                 <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 p-2 rounded-full bg-white dark:bg-slate-800 shadow-md">
-                   <Icon name="simple-icons:go" class="h-6 w-6 text-[#00ADD8]" />
+                   <Icon name="simple-icons:typescript" class="h-6 w-6 text-[#3178C6]" />
                 </div>
                 <div class="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 p-2 rounded-full bg-white dark:bg-slate-800 shadow-md">
                    <Icon name="simple-icons:postgresql" class="h-6 w-6 text-[#4169E1]" />
@@ -178,9 +178,11 @@
           </div>
         </NuxtLink>
 
-        <!-- 5. Articles & Blog (Standard Card) - Amber/Gold -->
-        <NuxtLink 
-          to="/blog"
+        <!-- 5. GitHub Profile (Standard Card) -->
+        <a
+          :href="contactConfig.socialLinks.find(link => link.name === 'GitHub')?.url || 'https://github.com/arra7trader'"
+          target="_blank"
+          rel="noopener noreferrer"
           v-motion
           :initial="{ opacity: 0, scale: 0.95 }"
           :visibleOnce="{ opacity: 1, scale: 1, transition: { delay: 500 } }"
@@ -194,17 +196,17 @@
 
           <div class="relative z-10 pr-12">
              <h3 class="text-2xl font-bold text-slate-800 dark:text-slate-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
-              Thoughts
+              GitHub
             </h3>
             <p class="mt-2 text-slate-600 dark:text-slate-400">
-              Articles and insights on modern web development.
+              Browse the repositories, experiments, and public code behind my current direction.
             </p>
           </div>
 
           <div class="relative z-10 mt-auto flex items-center text-sm font-semibold text-accent-600 dark:text-accent-400">
-            Read Blog <Icon name="heroicons:arrow-right" class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            Open Profile <Icon name="heroicons:arrow-top-right-on-square" class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </div>
-        </NuxtLink>
+        </a>
 
       </div>
     </div>
