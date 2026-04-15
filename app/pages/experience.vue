@@ -122,7 +122,7 @@ onMounted(() => {
       <div class="content-wrapper">
         <div class="page-content max-w-3xl">
           <p class="mb-8">
-            This page highlights the direction of my recent work: shipping independent products, exploring practical automation, and sharpening technical depth through real builds.
+            This page captures the broader journey behind my work, from early operational and commercial roles to my current focus on AI product engineering, fullstack delivery, and machine learning-driven systems.
           </p>
 
           <NuxtLink
