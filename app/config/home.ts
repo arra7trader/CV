@@ -15,7 +15,7 @@ export const homeConfig = {
     titles: [
       'AI Product Engineer Full Stack'
     ],
-    tagline: ' focused on AI product development, LLM integration, agentic workflows, fullstack systems, and neural network training for trading intelligence and business automation.'
+    tagline: 'focused on AI product development, LLM integration, agentic workflows, fullstack systems, and neural network pipelines for trading intelligence and business automation.'
   },
 
   quote: {

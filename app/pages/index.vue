@@ -33,6 +33,11 @@ useSeoMeta({
       <HomePrettyOptimized />
     </section>
 
+    <!-- Interactive Playground -->
+    <section class="mb-12 lg:mb-24">
+      <HomeInteractivePlayground />
+    </section>
+
     <!-- Bento Grid Showcase (Navigation Hub) -->
     <section>
       <HomeShowcase />

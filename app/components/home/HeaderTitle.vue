@@ -65,15 +65,14 @@ const currentTitle = computed(() => homeConfig.hero.titles[currentTitleIndex.val
         :enter="{ x: 0, opacity: 1, transition: { delay: 300 } }"
         class="block max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg lg:max-w-[41rem] dark:text-slate-400"
       >
-        <span class="lowercase">a </span>
         <strong 
-          class="title-animated font-bold lowercase text-slate-700 dark:text-slate-300 inline-block"
+          class="title-animated font-bold text-slate-700 dark:text-slate-300 inline-block"
           :class="isAnimating ? 'animate-slide-out' : 'animate-slide-in'"
         >
           {{ currentTitle }}
         </strong>
-        <span>
-           {{ homeConfig.hero.tagline }}
+        <span class="ml-1">
+          {{ homeConfig.hero.tagline }}
         </span>
       </h1>
     </span>
