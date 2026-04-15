@@ -48,7 +48,7 @@ const currentTitle = computed(() => homeConfig.hero.titles[currentTitleIndex.val
         v-motion
         :initial="{ x: -32, opacity: 0 }"
         :enter="{ x: 0, opacity: 1, transition: { delay: 200 } }"
-        class="mb-4 block max-w-[11ch] text-[2.15rem] font-[1000] leading-[0.94] tracking-[-0.05em] sm:text-[3.05rem] md:mb-6 md:text-[3.6rem] lg:max-w-none lg:text-[3rem] lg:whitespace-nowrap xl:text-[3.3rem]"
+        class="mb-4 block max-w-[11ch] text-[2.05rem] font-[1000] leading-[0.95] tracking-[-0.05em] sm:text-[2.9rem] md:mb-6 md:text-[3.35rem] lg:max-w-none lg:text-[2.8rem] lg:whitespace-nowrap xl:text-[3.05rem]"
       >
         <span class="block lg:inline">I'm {{ homeConfig.hero.name.first }}</span>
         <strong class="name-animated relative mt-1 block text-accent-600 dark:text-accent-500 lg:ml-2 lg:inline">
