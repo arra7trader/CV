@@ -13,11 +13,9 @@ export const homeConfig = {
       highlighted: 'Muldiawan'
     },
     titles: [
-      'AI Product Engineer Full Stack',
-      'Fullstack Developer',
-      'Machine Learning Builder'
+      'AI Product Engineer Full Stack'
     ],
-    tagline: ' who builds AI-enabled products, agent workflows, and trading intelligence systems for real business and market use cases.'
+    tagline: ' focused on AI product development, LLM integration, agentic workflows, fullstack systems, and neural network training for trading intelligence and business automation.'
   },
 
   quote: {
