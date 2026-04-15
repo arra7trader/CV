@@ -2,33 +2,33 @@
 
 export const homeConfig = {
   meta: {
-    title: 'Arland P | Fullstack Developer',
-    description: 'Fullstack developer building product-focused web apps, AI tools, and trading systems with a practical mindset.'
+    title: 'Arland Pratama Muldiawan | AI Product Engineer',
+    description: 'AI Product Engineer Full Stack building web apps, agentic AI systems, and trading intelligence tools with a practical execution mindset.'
   },
 
   hero: {
     greeting: 'hi!',
     name: {
-      first: 'Arland',
-      highlighted: 'P'
+      first: 'Arland Pratama',
+      highlighted: 'Muldiawan'
     },
     titles: [
+      'AI Product Engineer Full Stack',
       'Fullstack Developer',
-      'AI Product Builder',
-      'Trading Systems Developer'
+      'Machine Learning Builder'
     ],
-    tagline: ' who builds fast web products, local-first tools, and practical automation for real workflows.'
+    tagline: ' who builds AI-enabled products, agent workflows, and trading intelligence systems for real business and market use cases.'
   },
 
   quote: {
-    text: 'I like turning rough ideas into usable products, from internal dashboards and AI workflows to market tools and automation systems.',
-    author: 'Arland P'
+    text: 'I enjoy translating ideas into deployable systems, from LLM-powered applications and dashboards to neural network training pipelines and market-focused tools.',
+    author: 'Arland Pratama Muldiawan'
   },
 
   techStack: [
     { name: 'Next.js', icon: 'simple-icons:nextdotjs', iconColor: 'text-slate-900 dark:text-white' },
     { name: 'TypeScript', icon: 'simple-icons:typescript', iconColor: 'text-[#3178C6]' },
-    { name: 'Prisma', icon: 'simple-icons:prisma', iconColor: 'text-slate-700 dark:text-slate-200' },
+    { name: 'Python', icon: 'simple-icons:python', iconColor: 'text-[#3776AB]' },
     { name: 'PostgreSQL', icon: 'simple-icons:postgresql', iconColor: 'text-[#4169E1]' },
     { name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', iconColor: 'text-[#06B6D4]' },
   ]

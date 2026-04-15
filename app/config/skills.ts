@@ -34,15 +34,15 @@ export const skillsConfig = {
   
   roles: [
     {
-      title: 'Fullstack Product Developer',
+      title: 'AI Product Engineer',
       icon: 'heroicons:globe-alt-20-solid',
-      description: 'Building product-ready web applications from interface to backend',
+      description: 'Building production-ready AI products from interface to backend',
       color: 'accent'
     },
     {
-      title: 'AI Automation Builder',
+      title: 'Machine Learning Builder',
       icon: 'heroicons:cpu-chip-20-solid',
-      description: 'Designing practical AI-assisted workflows and internal tools',
+      description: 'Designing training pipelines, forecasting models, and inference-ready workflows',
       color: 'accent'
     },
     {
@@ -71,12 +71,12 @@ export const skillsConfig = {
       iconColor: 'text-[#3178C6]'
     },
     {
-      name: 'Prisma',
-      icon: 'simple-icons:prisma',
-      description: 'A reliable layer for shaping database-backed apps with clean developer ergonomics.',
+      name: 'Python',
+      icon: 'simple-icons:python',
+      description: 'The language I use for model training, data preparation, and ML service workflows.',
       gradient: 'from-emerald-50 dark:from-emerald-900/20',
       iconBg: 'bg-emerald-100 dark:bg-emerald-900/50',
-      iconColor: 'text-slate-700 dark:text-slate-200'
+      iconColor: 'text-[#3776AB]'
     },
     {
       name: 'PostgreSQL',
@@ -90,9 +90,9 @@ export const skillsConfig = {
 
   programmingLanguages: [
     { name: 'TypeScript', indicator: 95, icon: 'simple-icons:typescript', iconColor: 'text-[#3178C6]' },
+    { name: 'Python', indicator: 90, icon: 'simple-icons:python', iconColor: 'text-[#3776AB]' },
     { name: 'JavaScript', indicator: 90, icon: 'simple-icons:javascript', iconColor: 'text-[#F7DF1E]' },
     { name: 'SQL', indicator: 85, icon: 'simple-icons:postgresql', iconColor: 'text-[#4169E1]' },
-    { name: 'Python', indicator: 75, icon: 'simple-icons:python', iconColor: 'text-[#3776AB]' },
     { name: 'PHP', indicator: 70, icon: 'simple-icons:php', iconColor: 'text-[#777BB4]' },
     { name: 'HTML/CSS', indicator: 90, icon: 'simple-icons:html5', iconColor: 'text-[#E34F26]' },
   ] as Skill[],
@@ -100,10 +100,11 @@ export const skillsConfig = {
   frameworks: [
     { name: 'Next.js', indicator: 95, icon: 'simple-icons:nextdotjs', iconColor: 'text-slate-900 dark:text-white' },
     { name: 'React', indicator: 90, icon: 'simple-icons:react', iconColor: 'text-[#61DAFB]' },
+    { name: 'FastAPI', indicator: 80, icon: 'simple-icons:fastapi', iconColor: 'text-[#009688]' },
     { name: 'Tailwind CSS', indicator: 90, icon: 'simple-icons:tailwindcss', iconColor: 'text-[#06B6D4]' },
     { name: 'Express', indicator: 80, icon: 'simple-icons:express', iconColor: 'text-slate-700 dark:text-slate-200' },
     { name: 'NestJS', indicator: 75, icon: 'simple-icons:nestjs', iconColor: 'text-[#E0234E]' },
-    { name: 'Vite', indicator: 75, icon: 'simple-icons:vite', iconColor: 'text-[#646CFF]' },
+    { name: 'Flutter', indicator: 70, icon: 'simple-icons:flutter', iconColor: 'text-[#02569B]' },
     { name: 'Nuxt.js', indicator: 65, icon: 'simple-icons:nuxtdotjs', iconColor: 'text-[#00DC82]' },
   ] as Skill[],
 
@@ -118,7 +119,8 @@ export const skillsConfig = {
     { name: 'VS Code', indicator: 95, icon: 'simple-icons:visualstudiocode', iconColor: 'text-[#007ACC]' },
     { name: 'Git', indicator: 90, icon: 'simple-icons:git', iconColor: 'text-[#F05032]' },
     { name: 'GitHub', indicator: 90, icon: 'simple-icons:github', iconColor: 'text-slate-900 dark:text-white' },
-    { name: 'Prisma', indicator: 85, icon: 'simple-icons:prisma', iconColor: 'text-slate-700 dark:text-slate-200' },
+    { name: 'TensorFlow', indicator: 80, icon: 'simple-icons:tensorflow', iconColor: 'text-[#FF6F00]' },
+    { name: 'OpenAI API', indicator: 85, icon: 'simple-icons:openai', iconColor: 'text-slate-800 dark:text-slate-100' },
     { name: 'Postman', indicator: 80, icon: 'simple-icons:postman', iconColor: 'text-[#FF6C37]' },
     { name: 'Sanity', indicator: 70, icon: 'simple-icons:sanity', iconColor: 'text-[#F03E2F]' },
     { name: 'FFmpeg', indicator: 70, icon: 'simple-icons:ffmpeg', iconColor: 'text-[#007808]' },

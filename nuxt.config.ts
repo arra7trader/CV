@@ -39,27 +39,27 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en'
       },
-      title: 'Arland P | Fullstack Developer',
-      titleTemplate: '%s | Arland P',
+      title: 'Arland Pratama Muldiawan | AI Product Engineer',
+      titleTemplate: '%s | Arland Pratama Muldiawan',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Fullstack developer building product-focused web apps, AI tools, and trading systems.' },
-        { name: 'author', content: 'Arland P' },
-        { name: 'keywords', content: 'Arland P, ARRA7, Fullstack Developer, Next.js, TypeScript, Prisma, AI tools, trading systems, portfolio' },
+        { name: 'description', content: 'AI Product Engineer Full Stack building web apps, agentic AI systems, and trading intelligence tools.' },
+        { name: 'author', content: 'Arland Pratama Muldiawan' },
+        { name: 'keywords', content: 'Arland Pratama Muldiawan, ARRA7, AI Product Engineer, Fullstack Developer, Next.js, TypeScript, Python, machine learning, trading systems, portfolio' },
         
         // Open Graph / Facebook
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Arland P | Fullstack Developer' },
-        { property: 'og:description', content: 'Fullstack developer building product-focused web apps, AI tools, and trading systems.' },
+        { property: 'og:title', content: 'Arland Pratama Muldiawan | AI Product Engineer' },
+        { property: 'og:description', content: 'AI Product Engineer Full Stack building web apps, agentic AI systems, and trading intelligence tools.' },
         { property: 'og:image', content: '/og-image.jpg' },
-        { property: 'og:site_name', content: 'Arland P' },
+        { property: 'og:site_name', content: 'Arland Pratama Muldiawan' },
         { property: 'og:locale', content: 'en_US' },
         
         // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Arland P | Fullstack Developer' },
-        { name: 'twitter:description', content: 'Fullstack developer building product-focused web apps, AI tools, and trading systems.' },
+        { name: 'twitter:title', content: 'Arland Pratama Muldiawan | AI Product Engineer' },
+        { name: 'twitter:description', content: 'AI Product Engineer Full Stack building web apps, agentic AI systems, and trading intelligence tools.' },
         { name: 'twitter:image', content: '/og-image.jpg' },
         { name: 'twitter:creator', content: '@arra7trader' },
         
@@ -92,10 +92,10 @@ export default defineNuxtConfig({
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
-            name: 'Arland P',
+            name: 'Arland Pratama Muldiawan',
             url: 'https://github.com/arra7trader/CV',
-            jobTitle: 'Fullstack Developer',
-            knowsAbout: ['Web Development', 'AI Tools', 'Trading Systems', 'Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
+            jobTitle: 'AI Product Engineer Full Stack',
+            knowsAbout: ['Web Development', 'Agentic AI', 'Machine Learning', 'Trading Systems', 'Next.js', 'TypeScript', 'Python', 'PostgreSQL'],
             sameAs: [
               'https://github.com/arra7trader',
               'https://www.linkedin.com/in/arland-p-41598595/'

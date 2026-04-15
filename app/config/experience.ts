@@ -14,39 +14,67 @@ export interface TimelineItem {
 export const experienceConfig = {
   meta: {
     title: 'Experience',
-    description: 'A snapshot of the products, experiments, and technical direction I am building right now.',
+    description: 'Professional experience across AI product engineering, sales leadership, and systems-focused product execution.',
     caption: 'Work'
   },
 
   timeline: [
     {
-      company: 'ARRA7 Independent Projects',
-      role: 'Fullstack Developer & Product Builder',
-      period: '2025 - Present',
-      periodStart: '2025-12',
+      company: 'PT Arra Tujuh Kreasi',
+      role: 'AI Product Engineer Full Stack',
+      period: 'November 2023 - Present',
+      periodStart: '2023-11',
       periodEnd: 'present',
-      description: 'Building a portfolio of web products across AI tooling, ERP workflows, trading systems, and automation-heavy internal tools.',
+      description: 'Developing AI-powered product features and end-to-end applications across web interfaces, backend APIs, dashboards, and machine learning workflows.',
       tasks: [
-        'Shipped products such as Reclipa, XAUUSD Extreme Expert, Crypto Telegram Desk, and PICA ERP.',
-        'Focused on end-to-end delivery: interface design, route handlers, database design, and product architecture.',
-        'Worked mostly with Next.js, TypeScript, Prisma, PostgreSQL, SQLite, and workflow automation patterns.'
+        'Built LLM-powered applications with agent workflows, prompt engineering, orchestration logic, and tool-calling architecture.',
+        'Delivered fullstack systems covering frontend, backend APIs, authentication, dashboards, and database integrations.',
+        'Prepared neural network pipelines for time-series prediction using LSTM and Bi-LSTM models, including preprocessing and evaluation.'
       ],
-      type: 'freelance'
+      type: 'fulltime'
+    },
+    {
+      company: 'PT. Arindra Wibowo Jaya',
+      role: 'Area Sales Promotion Supervisor',
+      period: 'July 2018 - January 2021',
+      periodStart: '2018-07',
+      periodEnd: '2021-01',
+      description: 'Led promotion execution, area mapping, and digital marketing support for trading and plastic distribution in the Bandung area.',
+      tasks: [
+        'Planned regional promotions and outlet visits to improve execution quality and demand generation.',
+        'Managed Google Ads, Facebook, and Instagram promotion activities to support sales growth.',
+        'Prepared sales and market reports while maintaining strong customer and channel relationships.'
+      ],
+      type: 'fulltime'
+    },
+    {
+      company: 'PT. United Family Food (UNIFAM)',
+      role: 'Area Sales Supervisor',
+      period: 'August 2017 - June 2018',
+      periodStart: '2017-08',
+      periodEnd: '2018-06',
+      description: 'Handled sales growth, distribution expansion, and reporting for the Bogor and Depok area.',
+      tasks: [
+        'Improved sales performance and distribution reach across assigned territories.',
+        'Introduced new products and supported market launch execution.',
+        'Monitored receivables and prepared weekly to annual performance reports.'
+      ],
+      type: 'fulltime'
     }
   ] as TimelineItem[],
 
   education: [
     {
-      company: 'Self-Directed Learning',
-      role: 'Web, AI, and Trading Systems',
-      period: 'Ongoing',
-      periodStart: '2024',
-      periodEnd: 'present',
-      description: 'Continuously sharpening product thinking and execution across modern web engineering, automation, analytics, and domain-specific trading tools.',
+      company: 'Indonesian Computer University',
+      role: 'Bachelor of Industrial Engineering',
+      period: 'September 2011 - March 2017',
+      periodStart: '2011-09',
+      periodEnd: '2017-03',
+      description: 'Completed undergraduate study in Industrial Engineering with experience in systems thinking, process analysis, and operational problem solving.',
       tasks: [
-        'Exploring system design through real builds instead of isolated demos.',
-        'Studying practical AI workflows, research tooling, and local-first product patterns.',
-        'Using each shipped project as a lab for architecture, usability, and business-oriented problem solving.'
+        'Built a foundation in analysis, production systems, and structured problem solving.',
+        'Developed the discipline to connect operational thinking with product and process improvement.',
+        'Later translated that systems mindset into software, AI workflows, and technical product work.'
       ],
       type: 'education'
     }

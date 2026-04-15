@@ -20,6 +20,20 @@ export const projectsConfig = {
 
   projects: [
     {
+      title: 'ARRA7 App',
+      description: 'Cross-platform AI and market analysis product spanning Next.js web, mobile clients, LLM integrations, charting, quotas, and backend services.',
+      technologies: ['Next.js', 'TypeScript', 'React 19', 'LibSQL', 'AI SDK'],
+      type: 'personal',
+      category: 'AI Product Platform',
+    },
+    {
+      title: 'Bitcoin MSE Model Training',
+      description: 'Deep learning training workflow comparing Bi-LSTM, LSTM, GRU, and Conv1D models for Bitcoin prediction using seven macro and on-chain parameters.',
+      technologies: ['Python', 'TensorFlow', 'LSTM', 'GRU', 'Conv1D'],
+      type: 'personal',
+      category: 'Machine Learning',
+    },
+    {
       title: 'Reclipa',
       description: 'Local-first content clipping workspace that combines transcript analysis, hook research, and clip generation into one practical workflow.',
       technologies: ['Next.js', 'TypeScript', 'Prisma', 'SQLite', 'FFmpeg'],

@@ -22,12 +22,12 @@ export const contactConfig = {
     caption: 'Work'
   },
 
-  name: 'Arland P',
-  email: '',
+  name: 'Arland Pratama Muldiawan',
+  email: 'arlandpratama@gmail.com',
 
   location: {
-    city: 'Indonesia',
-    region: '',
+    city: 'Cileunyi',
+    region: 'Bandung, West Java',
     country: 'Indonesia',
     timezone: 'GMT+7',
     flag: 'ID'
@@ -35,15 +35,21 @@ export const contactConfig = {
 
   intro: {
     title: "Let's build something useful.",
-    description: 'Open to collaboration on web products, internal tools, AI workflows, and market-focused systems.'
+    description: 'Open to collaboration on AI products, fullstack applications, machine learning workflows, and trading-focused systems.'
   },
 
   contactInfo: [
     {
       icon: 'heroicons:map-pin-20-solid',
       label: 'Location',
-      value: 'Indonesia',
-      subValue: 'Remote-friendly'
+      value: 'Cileunyi, Bandung',
+      subValue: 'West Java, Indonesia'
+    },
+    {
+      icon: 'heroicons:envelope-20-solid',
+      label: 'Email',
+      value: 'arlandpratama@gmail.com',
+      subValue: 'Primary contact'
     },
     {
       icon: 'heroicons:clock-20-solid',
@@ -72,6 +78,6 @@ export const contactConfig = {
 
   availability: {
     status: 'available',
-    message: 'Open to collaboration, product builds, and practical software work.'
+    message: 'Available for AI product engineering, fullstack builds, and practical ML-backed software work.'
   }
 }

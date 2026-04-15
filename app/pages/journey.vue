@@ -9,7 +9,7 @@ definePageMeta({
 })
 
 useSeoMeta({
-  title: 'Journey | Arland P',
+  title: 'Journey | Arland Pratama Muldiawan',
   description: 'An interactive journey through the projects and learning experiences behind my work.',
 })
 

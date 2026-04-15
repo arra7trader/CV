@@ -4,9 +4,9 @@ const codeSnippets = [
     filename: 'developer.ts',
     lines: [
       { text: 'const developer = {', color: 'text-violet-600 dark:text-violet-400' },
-      { text: '  name: "Arland P",', color: 'text-emerald-600 dark:text-green-400' },
-      { text: '  role: "Fullstack",', color: 'text-emerald-600 dark:text-green-400' },
-      { text: '  stack: ["Next", "TS"],', color: 'text-amber-600 dark:text-amber-400' },
+      { text: '  name: "Arland Pratama",', color: 'text-emerald-600 dark:text-green-400' },
+      { text: '  role: "AI Product Engineer",', color: 'text-emerald-600 dark:text-green-400' },
+      { text: '  stack: ["Next", "TS", "Py"],', color: 'text-amber-600 dark:text-amber-400' },
       { text: '  ships: "real products"', color: 'text-pink-600 dark:text-pink-400' },
       { text: '};', color: 'text-violet-600 dark:text-violet-400' },
     ]
@@ -27,7 +27,7 @@ const codeSnippets = [
     lines: [
       { text: 'const focus = [', color: 'text-violet-600 dark:text-violet-400' },
       { text: '  "automation",', color: 'text-sky-600 dark:text-sky-400' },
-      { text: '  "analytics",', color: 'text-emerald-600 dark:text-green-400' },
+      { text: '  "ml systems",', color: 'text-emerald-600 dark:text-green-400' },
       { text: '  "trading tools"', color: 'text-emerald-600 dark:text-green-400' },
       { text: ']', color: 'text-amber-600 dark:text-amber-400' },
       { text: '', color: 'text-violet-600 dark:text-violet-400' },
