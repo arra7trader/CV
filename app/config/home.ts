@@ -19,12 +19,14 @@ export const homeConfig = {
   },
 
   quote: {
-    text: 'I enjoy translating ideas into deployable systems, from LLM-powered applications and dashboards to neural network training pipelines and market-focused tools.',
+    text: 'I build AI engineer workflows into real products, from LLM-powered applications and agent systems to neural network pipelines, backend services, and business automation.',
     author: 'Arland Pratama Muldiawan'
   },
 
   techStack: [
     { name: 'Next.js', icon: 'simple-icons:nextdotjs', iconColor: 'text-slate-900 dark:text-white' },
+    { name: 'React.js', icon: 'simple-icons:react', iconColor: 'text-[#61DAFB]' },
+    { name: 'Node.js', icon: 'simple-icons:nodedotjs', iconColor: 'text-[#5FA04E]' },
     { name: 'TypeScript', icon: 'simple-icons:typescript', iconColor: 'text-[#3178C6]' },
     { name: 'Python', icon: 'simple-icons:python', iconColor: 'text-[#3776AB]' },
     { name: 'PostgreSQL', icon: 'simple-icons:postgresql', iconColor: 'text-[#4169E1]' },
