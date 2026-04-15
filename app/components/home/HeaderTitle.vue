@@ -43,27 +43,27 @@ const currentTitle = computed(() => homeConfig.hero.titles[currentTitleIndex.val
         />
       </div>
     </div>
-    <span class="text-slate-700 dark:text-slate-300">
+    <span class="block text-slate-700 dark:text-slate-300">
       <span
         v-motion
         :initial="{ x: -32, opacity: 0 }"
         :enter="{ x: 0, opacity: 1, transition: { delay: 200 } }"
-        class="mb-4 block text-[2rem] font-[1000] leading-none md:mb-6 md:text-6xl"
+        class="mb-4 block max-w-[11ch] text-[2.35rem] font-[1000] leading-[0.92] tracking-[-0.04em] sm:text-[3.4rem] md:mb-6 md:text-[4.5rem] xl:text-[5rem]"
       >
-        I'm {{ homeConfig.hero.name.first }} 
-        <strong class="name-animated relative inline-block text-accent-600 dark:text-accent-500">
+        <span class="block">I'm {{ homeConfig.hero.name.first }}</span>
+        <strong class="name-animated relative mt-1 block text-accent-600 dark:text-accent-500">
           {{ homeConfig.hero.name.highlighted }}
           <!-- Sparkles -->
           <span class="sparkle sparkle-1" />
           <span class="sparkle sparkle-2" />
           <span class="sparkle sparkle-3" />
-        </strong>,
+        </strong>
       </span>
       <h1
         v-motion
         :initial="{ x: -32, opacity: 0 }"
         :enter="{ x: 0, opacity: 1, transition: { delay: 300 } }"
-        class="block max-w-xl text-base text-slate-600 md:text-xl dark:text-slate-400"
+        class="block max-w-2xl text-base leading-relaxed text-slate-600 md:text-xl dark:text-slate-400"
       >
         <span class="lowercase">a </span>
         <strong 

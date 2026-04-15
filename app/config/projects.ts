@@ -20,7 +20,7 @@ export const projectsConfig = {
 
   projects: [
     {
-      title: 'ARRA7 App',
+      title: 'ArlandPM App',
       description: 'Cross-platform AI and market analysis product spanning Next.js web, mobile clients, LLM integrations, charting, quotas, and backend services.',
       technologies: ['Next.js', 'TypeScript', 'React 19', 'LibSQL', 'AI SDK'],
       type: 'personal',

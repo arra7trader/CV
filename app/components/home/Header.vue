@@ -9,8 +9,8 @@
     <!-- Animated Grid Effects -->
     <HomeAnimatedGrid />
     <div class="content-wrapper">
-      <div class="relative">
-        <div class="relative z-10">
+      <div class="relative lg:min-h-[34rem]">
+        <div class="relative z-10 lg:max-w-[calc(100%-31rem)] xl:max-w-[calc(100%-33rem)]">
           <!-- Available for Freelance Badge -->
           <div class="mb-4 md:mb-6 flex justify-center md:justify-start">
             <div class="freelance-badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm dark:shadow-lg">
@@ -23,14 +23,14 @@
           </div>
           <HomeHeaderTitle />
         </div>
-        <div class="mt-6 md:mt-8">
+        <div class="mt-6 md:mt-8 lg:max-w-[calc(100%-31rem)] xl:max-w-[calc(100%-33rem)]">
           <HomeHeaderCta />
         </div>
-        <div class="mt-20 lg:mt-36">
+        <div class="mt-20 lg:mt-28 lg:max-w-[calc(100%-31rem)] xl:max-w-[calc(100%-33rem)]">
           <HomeHeaderTechStack />
         </div>
         <div
-          class="pointer-events-none absolute -top-8 lg:-top-16 right-0 z-0 hidden select-none lg:block"
+          class="pointer-events-none absolute right-0 top-0 z-0 hidden select-none lg:block xl:right-2"
         >
           <HomeHeaderImage />
         </div>

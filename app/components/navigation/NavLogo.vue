@@ -43,8 +43,8 @@ defineProps<{
     </div>
     
     <!-- Text Logomark -->
-    <span class="font-sans text-lg font-extrabold tracking-widest text-slate-800 dark:text-slate-100 transition-colors duration-300 group-hover:text-accent-600 dark:group-hover:text-accent-400">
-      ARRA7<span class="text-accent-500">.</span>
+    <span class="font-sans text-base font-extrabold tracking-[0.2em] text-slate-800 dark:text-slate-100 transition-colors duration-300 group-hover:text-accent-600 dark:group-hover:text-accent-400 sm:text-lg">
+      ArlandPM<span class="text-accent-500">.</span>
     </span>
   </NuxtLink>
 </template>
