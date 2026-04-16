@@ -120,9 +120,7 @@ onMounted(() => {
       <div class="content-wrapper">
         <div class="page-content max-w-3xl">
           <p>
-            I started learning web development since <strong>high school (SMK)</strong>, 
-            which means I've been in this field for about <strong>{{ yearsOfExperience }} years</strong>. 
-            Throughout my journey, I've explored various technologies and roles in software development.
+            I am a <strong>self-taught builder</strong> who has been learning and shipping continuously since <strong>2018</strong>, which gives me about <strong>{{ yearsOfExperience }} years</strong> of hands-on growth through real projects, experimentation, and consistent execution. Instead of relying on a formal technical path, I built my skills by studying independently, testing ideas directly in production-style work, and turning curiosity into practical systems that deliver value.
           </p>
 
           <!-- What I Do Section -->

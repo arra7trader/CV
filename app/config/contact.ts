@@ -26,8 +26,8 @@ export const contactConfig = {
   email: 'arlandpratama@gmail.com',
 
   location: {
-    city: 'Cileunyi',
-    region: 'Bandung, West Java',
+    city: 'Bandung',
+    region: 'West Java',
     country: 'Indonesia',
     timezone: 'GMT+7',
     flag: 'ID'
@@ -35,14 +35,14 @@ export const contactConfig = {
 
   intro: {
     title: "Let's build something useful.",
-    description: 'Open to collaboration on AI products, fullstack applications, machine learning workflows, and trading-focused systems.'
+    description: 'Open to AI Engineer, AI Product Engineer, and related opportunities focused on AI products, LLM integration, intelligent automation, and machine learning systems.'
   },
 
   contactInfo: [
     {
       icon: 'heroicons:map-pin-20-solid',
       label: 'Location',
-      value: 'Cileunyi, Bandung',
+      value: 'Bandung',
       subValue: 'West Java, Indonesia'
     },
     {
@@ -78,6 +78,6 @@ export const contactConfig = {
 
   availability: {
     status: 'available',
-    message: 'Available for AI product engineering, fullstack builds, and practical ML-backed software work.'
+    message: 'Open to AI Engineer, AI Product Engineer, and practical ML-backed software opportunities.'
   }
 }

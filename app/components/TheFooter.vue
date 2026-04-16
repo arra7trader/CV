@@ -62,7 +62,7 @@ const currentYear = new Date().getFullYear()
                 About Me
               </div>
               <p :class="clsx('mb-4 font-normal leading-relaxed')">
-                I'm {{ contactConfig.name }}, a <strong>fullstack developer</strong> building product-focused web apps, AI tools, and trading systems.
+                I'm {{ contactConfig.name }}, an <strong>AI Product Engineer</strong> building product-focused applications, AI systems, and trading intelligence tools.
               </p>
               <ul :class="clsx('-ml-2 flex gap-1')">
                 <li v-for="social in contactConfig.socialLinks" :key="social.name">

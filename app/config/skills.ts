@@ -26,11 +26,11 @@ export interface TechCard {
 export const skillsConfig = {
   meta: {
     title: 'Skills and Tools',
-    description: 'A closer look at the languages, frameworks, databases, and tools behind my recent product builds.',
+    description: 'A closer look at the self-taught technical stack, tools, and execution habits behind my AI product engineering work.',
     caption: 'Work'
   },
 
-  yearsOfExperience: () => 3,
+  yearsOfExperience: () => new Date().getFullYear() - 2018,
   
   roles: [
     {
